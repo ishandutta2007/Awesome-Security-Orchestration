@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c1a" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff">
+        <animate attributeName="stop-color" values="#00f0ff; #7b2cbf; #00ffa3; #00f0ff" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#7b2cbf">
+        <animate attributeName="stop-color" values="#7b2cbf; #00ffa3; #00f0ff; #7b2cbf" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00ffa3">
+        <animate attributeName="stop-color" values="#00ffa3; #00f0ff; #7b2cbf; #00ffa3" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7b2cbf" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7b2cbf" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.6" />
+    </pattern>
+
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 52px; fill: url(#textGrad); letter-spacing: 1px; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; letter-spacing: 0.5px; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 13px; fill: #38bdf8; }
+      
+      @keyframes pulse {
+        0% { r: 4px; opacity: 0.3; }
+        50% { r: 14px; opacity: 0.9; }
+        100% { r: 4px; opacity: 0.3; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -80; }
+      }
+      @keyframes radarScan {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .pulse-node { animation: pulse 3s infinite ease-in-out; }
+      .flow-line { stroke-dasharray: 8 8; animation: dash 2s linear infinite; }
+      .radar-sweep { transform-origin: 1050px 200px; animation: radarScan 6s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+  <rect width="1200" height="400" fill="url(#grid)" />
+
+  <!-- Ambient Glows -->
+  <circle cx="200" cy="100" r="250" fill="url(#violetGlow)" />
+  <circle cx="1000" cy="250" r="280" fill="url(#glow)" />
+
+  <!-- Animated Network Connections & Nodes -->
+  <g opacity="0.7">
+    <!-- Links -->
+    <line x1="850" y1="120" x2="980" y2="180" stroke="#00f0ff" stroke-width="1.5" class="flow-line" />
+    <line x1="980" y1="180" x2="1100" y2="110" stroke="#7b2cbf" stroke-width="1.5" class="flow-line" />
+    <line x1="980" y1="180" x2="1050" y2="280" stroke="#00ffa3" stroke-width="1.5" class="flow-line" />
+    <line x1="1050" y1="280" x2="900" y2="290" stroke="#38bdf8" stroke-width="1.5" class="flow-line" />
+    <line x1="850" y1="120" x2="900" y2="290" stroke="#a855f7" stroke-width="1.5" class="flow-line" />
+
+    <!-- Nodes -->
+    <circle cx="850" cy="120" r="6" fill="#00f0ff" />
+    <circle cx="850" cy="120" r="12" fill="none" stroke="#00f0ff" class="pulse-node" />
+    <text x="850" y="100" font-family="Segoe UI" font-size="11" fill="#38bdf8" text-anchor="middle">SIEM / XDR</text>
+
+    <circle cx="980" cy="180" r="9" fill="#00ffa3" />
+    <circle cx="980" cy="180" r="18" fill="none" stroke="#00ffa3" class="pulse-node" style="animation-delay: 1s;" />
+    <text x="980" y="155" font-family="Segoe UI" font-size="12" font-weight="bold" fill="#00ffa3" text-anchor="middle">SOAR CORE</text>
+
+    <circle cx="1100" cy="110" r="6" fill="#7b2cbf" />
+    <circle cx="1100" cy="110" r="12" fill="none" stroke="#7b2cbf" class="pulse-node" style="animation-delay: 0.5s;" />
+    <text x="1100" y="90" font-family="Segoe UI" font-size="11" fill="#c084fc" text-anchor="middle">Threat Intel</text>
+
+    <circle cx="1050" cy="280" r="6" fill="#38bdf8" />
+    <circle cx="1050" cy="280" r="12" fill="none" stroke="#38bdf8" class="pulse-node" style="animation-delay: 1.5s;" />
+    <text x="1050" y="305" font-family="Segoe UI" font-size="11" fill="#38bdf8" text-anchor="middle">Case Mgmt</text>
+
+    <circle cx="900" cy="290" r="6" fill="#f43f5e" />
+    <circle cx="900" cy="290" r="12" fill="none" stroke="#f43f5e" class="pulse-node" style="animation-delay: 2s;" />
+    <text x="900" y="315" font-family="Segoe UI" font-size="11" fill="#fb7185" text-anchor="middle">Automated Containment</text>
+  </g>
+
+  <!-- Radar Scan Overlay -->
+  <g transform="translate(1050, 200)" opacity="0.25">
+    <circle r="70" fill="none" stroke="#00f0ff" stroke-width="1" />
+    <circle r="40" fill="none" stroke="#00f0ff" stroke-width="0.8" />
+    <line x1="-70" y1="0" x2="70" y2="0" stroke="#00f0ff" stroke-width="0.8" />
+    <line x1="0" y1="-70" x2="0" y2="70" stroke="#00f0ff" stroke-width="0.8" />
+    <g class="radar-sweep">
+      <path d="M 0 0 L 70 0 A 70 70 0 0 1 0 70 Z" fill="url(#textGrad)" opacity="0.5" />
+    </g>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <g transform="translate(80, 160)">
+    <!-- Security Shield Icon -->
+    <g transform="translate(0, -42)">
+      <path d="M 0 0 L 22 -10 L 44 0 L 44 24 C 44 38 22 50 22 50 C 22 50 0 38 0 24 Z" fill="none" stroke="url(#textGrad)" stroke-width="3.5" />
+      <path d="M 14 22 L 20 28 L 32 16" fill="none" stroke="#00ffa3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <text x="65" y="0" class="title">Awesome Security Orchestration</text>
+    <text x="65" y="38" class="subtitle">Curated SOAR Platforms, Security Automation &amp; Incident Response Stack</text>
+
+    <!-- Category Pill Badges -->
+    <g transform="translate(65, 75)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="130" height="30" rx="15" fill="#0f172a" stroke="#00f0ff" stroke-width="1.2" />
+      <text x="65" y="19" class="badge-text" text-anchor="middle">⚡ SOAR Core</text>
+
+      <!-- Pill 2 -->
+      <rect x="142" y="0" width="170" height="30" rx="15" fill="#0f172a" stroke="#7b2cbf" stroke-width="1.2" />
+      <text x="227" y="19" class="badge-text" fill="#c084fc" text-anchor="middle">🤖 Playbook Automation</text>
+
+      <!-- Pill 3 -->
+      <rect x="324" y="0" width="165" height="30" rx="15" fill="#0f172a" stroke="#00ffa3" stroke-width="1.2" />
+      <text x="4065" y="19" class="badge-text" fill="#00ffa3" text-anchor="middle">🛡️ Threat Intelligence</text>
+
+      <!-- Pill 4 -->
+      <rect x="501" y="0" width="165" height="30" rx="15" fill="#0f172a" stroke="#f43f5e" stroke-width="1.2" />
+      <text x="583.5" y="19" class="badge-text" fill="#fb7185" text-anchor="middle">🎯 Incident Response</text>
+    </g>
+  </g>
+</svg>

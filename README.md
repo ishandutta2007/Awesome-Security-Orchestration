@@ -1,640 +1,360 @@
-# Awesome-Security-Orchestration
+# 🛡️ Awesome Security Orchestration, Automation & Response (SOAR)
 
-## Top Security Orchestration, Automation & Response (SOAR) Ecosystem
+![Awesome Security Orchestration](assets/banner.svg)
 
-**Curated List of SaaS/Hosted Platforms & Open-Source GitHub Projects**
-*Focused on Security Orchestration, Automated Incident Response, SOC Playbooks, Threat Intelligence, Case Management & Security Automation*
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Orchestration"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Security-Orchestration?style=social" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Security-Orchestration/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Security-Orchestration?style=social" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+## ⚡ Top Security Orchestration, Automation & Response (SOAR) Ecosystem
+
+**Curated Directory of Enterprise SaaS Platforms & Open-Source Security Automation Tools**  
+*Focused on Security Orchestration, Automated Incident Response, SOC Playbooks, Threat Intelligence Automation, Case Management & Cloud XDR/SIEM Integrations.*  
 **Last updated: September 2026**
 
 This repository tracks notable **SaaS/hosted platforms** and **open-source projects** for **Security Orchestration, Automation and Response (SOAR)**. These tools connect SIEM, XDR, EDR, firewalls, email security, threat intelligence, identity systems, ticketing platforms and other security controls so that repetitive investigation and response tasks can be automated through workflows, playbooks and policy-driven actions.
 
-**Examples** include Palo Alto Networks Cortex XSOAR, Splunk SOAR, Microsoft Sentinel, Google SecOps SOAR, Tines, Torq, Swimlane, FortiSOAR, IBM QRadar SOAR, D3 Security, Rapid7 InsightConnect, Sumo Logic Cloud SOAR and Cyware Orchestrate. Current 2026 comparisons continue to place Cortex XSOAR, Splunk SOAR, Tines, Torq, Swimlane, Microsoft Sentinel and Google SecOps among the major SOAR/automation offerings. ([Deepak Gupta][1])
+---
 
-**Open-source emphasis**: This section is heavily expanded with open-source SOAR platforms and complementary projects for self-hosting, automated alert enrichment, incident response, threat-intelligence automation, case management, IOC analysis, security workflows and SOC orchestration. The strongest open-source approach is generally **compositional** rather than relying on a single product: **Shuffle + TheHive + Cortex + MISP/OpenCTI + Wazuh + DFIR-IRIS + StackStorm** can together provide a substantial open SOC automation stack. Shuffle describes itself as an open-source security automation platform with workflow editing, OpenAPI-based applications and integrations; StackStorm provides event-driven automation, rules, workflows and integration packs. ([GitHub][2])
+## 📌 Table of Contents
 
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites or GitHub repositories.
+- [☁️ SaaS/Hosted Platforms](#️-saashosted-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+- [⚡ Open-Source SOAR Platforms](#-open-source-soar-platforms)
+- [🚨 Open-Source Incident Response \& Case Management](#-open-source-incident-response--case-management)
+- [🧠 Open-Source Threat Intelligence \& IOC Automation](#-open-source-threat-intelligence--ioc-automation)
+- [🤖 Open-Source Workflow \& Automation Engines](#-open-source-workflow--automation-engines)
+- [📡 Open-Source SIEM/XDR \& Security Data Sources](#-open-source-siemxdr--security-data-sources)
+- [🎯 Suggested Open-Source Architecture by Use Case](#-suggested-open-source-architecture-by-use-case)
+- [🔄 Commercial SOAR → Open-Source Equivalents](#-commercial-soar--open-source-equivalents)
+- [🧱 Frameworks for Building Custom SOAR Systems](#-frameworks-for-building-custom-soar-systems)
+- [📐 Reference Open-Source SOAR Architecture](#-reference-open-source-soar-architecture)
+- [⚙️ Typical SOAR Workflow](#️-typical-soar-workflow)
+- [🤖 AI-Assisted Open-Source SOAR](#-ai-assisted-open-source-soar)
+- [📈 Star History](#-star-history)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#️-disclaimer)
 
-## Table of Contents
+---
 
-* [SaaS/Hosted Platforms](#saashosted-platforms)
-* [Open-Source GitHub Projects](#open-source-github-projects)
-* [Open-Source SOAR Platforms](#open-source-soar-platforms)
-* [Open-Source Incident Response & Case Management](#open-source-incident-response--case-management)
-* [Open-Source Threat Intelligence & IOC Automation](#open-source-threat-intelligence--ioc-automation)
-* [Open-Source Workflow & Automation Engines](#open-source-workflow--automation-engines)
-* [Open-Source SIEM/XDR & Security Data Sources](#open-source-siemxdr--security-data-sources)
-* [Additional Strong Open-Source Options](#additional-strong-open-source-options)
-* [Commercial SOAR → Open-Source Equivalents](#commercial-soar--open-source-equivalents)
-* [Frameworks for Building Custom SOAR Systems](#frameworks-for-building-custom-soar-systems)
-* [Typical SOAR Workflow](#typical-soar-workflow)
-* [Reference Open-Source SOAR Architecture](#reference-open-source-soar-architecture)
-* [How to Contribute](#how-to-contribute)
-* [Disclaimer](#disclaimer)
+## ☁️ SaaS/Hosted Platforms
 
-## SaaS/Hosted Platforms
+> 🌐 **Market Overview**: The global Security Orchestration, Automation and Response (SOAR) market is estimated at **$1.8 Billion to $2.2 Billion (2026)** and is projected to reach **$3.5+ Billion by 2030** (growing at a ~15.2% CAGR). The market is **moderately fragmented**, featuring dominant cloud hyper-scalers and enterprise cybersecurity giants (Microsoft, Google, Cisco/Splunk, IBM, Palo Alto Networks, Fortinet) alongside innovative specialist hyperautomation vendors (Tines, Torq, Swimlane).
 
-* **[Palo Alto Networks Cortex XSOAR](https://www.paloaltonetworks.com/cortex/cortex-xsoar)**
-  Enterprise SOAR platform for incident management, playbooks, threat intelligence, investigation and automated response, with extensive security-product integrations.
+*Note: The table below is sorted by **Company Size (Revenue / Market Cap / Valuation)** in descending order.* ⬇️
 
-* **[Splunk SOAR](https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html)**
-  Security automation platform integrating investigation, enrichment and response workflows with Splunk's security ecosystem.
+| Platform | Description | Starting Pricing | Free Tier / Trial Limit | Company Size (Rev / Valuation) |
+| --- | --- | --- | --- | --- |
+| **[Microsoft Sentinel](https://azure.microsoft.com/products/microsoft-sentinel/)** ☁️ | Cloud-native SIEM/SOAR platform using automation rules and Logic Apps playbooks to orchestrate security response across Microsoft and third-party services. | $4.30 / GB ingested (Pay-As-You-Go analytics tier; commitment tiers start at 100 GB/day for $100/day) | 31-day free trial (includes up to 10 GB/day of free data ingestion per workspace, up to 20 workspaces) | **~$245B Revenue** / ~$3.1T Market Cap (Parent: Microsoft) |
+| **[Google SecOps](https://cloud.google.com/security/products/security-operations)** 🌐 | Cloud security operations platform combining SIEM, threat intelligence, detection and SOAR capabilities (formerly Chronicle & Siemplify). | $2,500 / month ($30,000/year base commit tier; or ~$45/employee/year in legacy model) | 30-day POC free trial (sales-assisted proof-of-concept trial via Google Cloud sales/partners) | **~$307B Revenue** / ~$2.0T Market Cap (Parent: Alphabet) |
+| **[Splunk SOAR](https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html)** ⚡ | Security automation platform integrating investigation, enrichment and response workflows with Splunk's security ecosystem (formerly Phantom). | $2,000 / seat / year (commercial analyst seats; 5-seat minimum deployment) | Free Community Edition (free forever, limited to 100 actions/day, 1 tenant, and 5 open cases max) | **~$54B Revenue** / ~$200B Market Cap (Parent: Cisco; $28B M&A) |
+| **[IBM QRadar SOAR](https://www.ibm.com/products/qradar-soar)** 🧠 | Enterprise incident-response and orchestration platform with case management, playbooks, threat intelligence and response automation (formerly Resilient). | $4,166 / month ($50,000/year starting tier per base user seat pack) | 30-day POC free trial (sales-assisted evaluation trial; standalone SIEM Community Edition provides 100 EPS) | **~$62B Revenue** / ~$180B Market Cap (Parent: IBM) |
+| **[Palo Alto Networks Cortex XSOAR](https://www.paloaltonetworks.com/cortex/cortex-xsoar)** 🛡️ | Enterprise SOAR platform for incident management, playbooks, threat intelligence, investigation and automated response (formerly Demisto). | $25,000 / year (AWS Marketplace base enterprise license; ~$2,083/mo) | 30-day free trial (full features; Community Edition offered 1 user / request-limited single node access) | **~$8.0B Revenue** / ~$110B Market Cap (Palo Alto Networks) |
+| **[FortiSOAR](https://www.fortinet.com/products/fortisoar)** 🔐 | Security orchestration platform integrated with Fortinet and third-party security technologies for automated incident response and SOC workflows. | $292 / month ($3,500/year for Starter Edition, up to 10,000 playbook actions/day) | Free Trial License (unlimited duration, restricted to 2–3 users and 200 playbook actions/day) | **~$5.3B Revenue** / ~$60B Market Cap (Parent: Fortinet) |
+| **[OpenText ArcSight SOAR](https://www.opentext.com/products/arcsight-soar)** 🏛️ | Security orchestration and automated response capabilities integrated with the ArcSight security ecosystem. | $3,500 / month ($42,000/year starting tier when added to ArcSight ESM/Recon environment) | 30-day POC free trial (sales-assisted evaluation trial; free add-on for existing ArcSight ESM licensees) | **~$5.8B Revenue** / ~$8.5B Market Cap (Parent: OpenText) |
+| **[Rapid7 InsightConnect](https://www.rapid7.com/products/insightconnect/)** 🔗 | Security orchestration and automation platform connecting security tools and operational systems through low-code workflows. | $2.15 / asset / month ($25.80/asset/year when bundled with InsightIDR SIEM) | 30-day free trial (full features on the Rapid7 Insight Platform) | **~$780M Revenue** / ~$2.5B Market Cap (Rapid7) |
+| **[Sumo Logic Cloud SOAR](https://www.sumologic.com/solutions/cloud-soar)** 📊 | Cloud-based SOAR capabilities for alert triage, enrichment, investigation and response automation (formerly DFLABS IncMan). | $250 / month ($3,000/year Flex Credits starter plan; Cloud SOAR Enterprise tier starting at $2,500/month) | 30-day free trial (includes 1 GB/day data ingestion and 30 days data retention limit) | **~$300M Revenue** / ~$1.7B Valuation (Acquired by Francisco Partners) |
+| **[Securonix](https://www.securonix.com/)** 📈 | Security analytics and operations platform incorporating automation, orchestration and response capabilities. | $3.00 / GB ingested / day ($2,500/month minimum ingestion capacity tier) | 30-day POC free trial (sales-assisted POC trial; offers Free SIEM Upgrade migration program) | **~$100M+ Revenue** / ~$1.0B+ Valuation (Backed by Vista Equity) |
+| **[Tines](https://www.tines.com/)** 🤖 | No-code/low-code security automation platform built around visual workflows, stories, API integrations and event-driven automation. | $500 / month ($6,000/year billed annually for Starter tier) | Free Community Edition (free forever for 1 builder seat, 3 active workflows/stories, 25,000 events/month) | **~$30M–$50M Revenue** / ~$600M Valuation (Backed by Accel, Felicis) |
+| **[NetWitness](https://www.netwitness.com/)** 📡 | Security operations platform incorporating detection, investigation and response automation. | $3,000 / month ($36,000/year starting tier for NetWitness Orchestration/SOAR module) | 30-day POC free trial (sales-assisted proof-of-concept evaluation trial) | **~$150M Revenue** / ~$500M Valuation (Backed by STG) |
+| **[Torq](https://torq.io/)** 🚀 | Security hyperautomation platform focused on event-driven workflows, investigation, remediation and AI-assisted SOC automation. | $3,000 / month ($36,000/year base tier; ~$0.05 per action / workflow execution) | 14-day free trial (full platform sandbox access; TCommunity edition available upon request) | **~$20M–$40M Revenue** / ~$400M Valuation (Backed by Bessemer, Evolution) |
+| **[Swimlane](https://swimlane.com/)** 🏊 | Enterprise security automation and SOAR platform providing low-code playbooks, case management, integrations and automated response. | $2,500 / month ($30,000/year Starter Tier base subscription) | 30-day POC free trial (sales-assisted evaluation trial with full Turbine features) | **~$50M Revenue** / ~$350M Valuation (Backed by Activate Capital) |
+| **[Hunters](https://hunters.security/)** 🎯 | Cloud security operations platform focused on automated detection, investigation and response. | $2,000 / month ($24,000/year starting data source integration tier) | 14-day POC free trial (sales-assisted SOC sandbox evaluation trial) | **~$15M–$30M Revenue** / ~$300M Valuation (Backed by Stripes, Snowflake) |
+| **[Cyware Orchestrate](https://www.cyware.com/products/cyware-orchestrate)** 🔍 | Security orchestration platform emphasizing threat intelligence automation, incident response and integration across security tools. | $1,500 / month ($18,000/year base tier annual subscription) | 14-day POC free trial (sales-assisted evaluation sandbox trial) | **~$20M–$40M Revenue** / ~$250M Valuation (Backed by Ten Eleven, Advent) |
+| **[D3 Security](https://d3security.com/)** 🛡️ | Enterprise SOAR platform focused on investigation, response automation, case management and MITRE ATT&CK-aligned workflows. | $1,667 / month ($20,000/year Smart SOAR starting platform tier + user seats) | 30-day POC free trial (sales-assisted proof-of-concept sandbox trial) | **~$15M–$30M Revenue** / ~$150M Valuation (Privately Held / Bootstrapped) |
 
-* **[Microsoft Sentinel](https://azure.microsoft.com/products/microsoft-sentinel/)**
-  Cloud-native SIEM/SOAR platform using automation rules and Logic Apps playbooks to orchestrate security response across Microsoft and third-party services.
+---
 
-* **[Google SecOps](https://cloud.google.com/security/products/security-operations)**
-  Cloud security operations platform combining SIEM, threat intelligence, detection and SOAR capabilities.
+## 🔓 Open-Source GitHub Projects
 
-* **[Tines](https://www.tines.com/)**
-  No-code/low-code security automation platform built around visual workflows, stories, API integrations and event-driven automation.
+> **Open-Source Advantage**: Self-hostable, transparent, modular security automation engines, threat-intelligence knowledge graphs, case-management suites, and alert-enrichment tools.
 
-* **[Torq](https://torq.io/)**
-  Security hyperautomation platform focused on event-driven workflows, investigation, remediation and AI-assisted SOC automation.
+*Note: Repositories below are sorted by **GitHub Star Count (Descending)**.* ⬇️
 
-* **[Swimlane](https://swimlane.com/)**
-  Enterprise security automation and SOAR platform providing low-code playbooks, case management, integrations and automated response.
+1. **[n8n](https://github.com/n8n-io/n8n)** [<img src="https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/n8n-io/n8n/stargazers) ⚡  
+   Fair-code workflow automation tool with extensive node integrations, webhooks, and visual workflow canvas used for building custom security orchestrations.
 
-* **[FortiSOAR](https://www.fortinet.com/products/fortisoar)**
-  Security orchestration platform integrated with Fortinet and third-party security technologies for automated incident response and SOC workflows.
+2. **[Grafana](https://github.com/grafana/grafana)** [<img src="https://img.shields.io/github/stars/grafana/grafana?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/grafana/grafana/stargazers) 📊  
+   Open and composable analytics and observability platform used by SOCs for security metrics, incident dashboards, and alert visualization.
 
-* **[IBM QRadar SOAR](https://www.ibm.com/products/qradar-soar)**
-  Enterprise incident-response and orchestration platform with case management, playbooks, threat intelligence and response automation.
+3. **[Ansible](https://github.com/ansible/ansible)** [<img src="https://img.shields.io/github/stars/ansible/ansible?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/ansible/ansible/stargazers) 🛠️  
+   Radically simple IT automation engine used for automated incident containment, endpoint isolation, user account management, and network firewall configuration.
 
-* **[D3 Security](https://d3security.com/)**
-  Enterprise SOAR platform focused on investigation, response automation, case management and MITRE ATT&CK-aligned workflows.
+4. **[Prometheus](https://github.com/prometheus/prometheus)** [<img src="https://img.shields.io/github/stars/prometheus/prometheus?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/prometheus/prometheus/stargazers) 📈  
+   Systems monitoring and alerting toolkit designed for scraping metric targets, evaluating alert rules, and dispatching security triggers.
 
-* **[Rapid7 InsightConnect](https://www.rapid7.com/products/insightconnect/)**
-  Security orchestration and automation platform connecting security tools and operational systems through low-code workflows.
+5. **[Apache Airflow](https://github.com/apache/airflow)** [<img src="https://img.shields.io/github/stars/apache/airflow?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/apache/airflow/stargazers) ⚙️  
+   Platform created by community to programmatically author, schedule, and monitor workflows for batch threat-intelligence ingestion and security data processing.
 
-* **[Sumo Logic Cloud SOAR](https://www.sumologic.com/solutions/cloud-soar)**
-  Cloud-based SOAR capabilities for alert triage, enrichment, investigation and response automation.
+6. **[Apache Kafka](https://github.com/apache/kafka)** [<img src="https://img.shields.io/github/stars/apache/kafka?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/apache/kafka/stargazers) 🌊  
+   Distributed event-streaming platform capable of handling high-throughput security event logs and feeding SOAR event-triage pipelines.
 
-* **[Cyware Orchestrate](https://www.cyware.com/products/cyware-orchestrate)**
-  Security orchestration platform emphasizing threat intelligence automation, incident response and integration across security tools.
+7. **[Nuclei](https://github.com/projectdiscovery/nuclei)** [<img src="https://img.shields.io/github/stars/projectdiscovery/nuclei?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/projectdiscovery/nuclei/stargazers) 🔍  
+   Fast and customizable vulnerability scanner based on simple YAML DSL templates for automated web & network asset verification.
 
-* **[Securonix](https://www.securonix.com/)**
-  Security analytics and operations platform incorporating automation, orchestration and response capabilities.
+8. **[Kestra](https://github.com/kestra-io/kestra)** [<img src="https://img.shields.io/github/stars/kestra-io/kestra?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/kestra-io/kestra/stargazers) 🤖  
+   Infinitely scalable, event-driven orchestration platform that builds security data workflows in YAML code.
 
-* **[OpenText ArcSight SOAR](https://www.opentext.com/products/arcsight-soar)**
-  Security orchestration and automated response capabilities integrated with the ArcSight security ecosystem.
+9. **[Node-RED](https://github.com/node-red/node-red)** [<img src="https://img.shields.io/github/stars/node-red/node-red?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/node-red/node-red/stargazers) 🔴  
+   Low-code programming for event-driven security integration, webhooks, REST API calls, and alert notification flows.
 
-* **[NetWitness](https://www.netwitness.com/)**
-  Security operations platform incorporating detection, investigation and response automation.
+10. **[osquery](https://github.com/osquery/osquery)** [<img src="https://img.shields.io/github/stars/osquery/osquery?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/osquery/osquery/stargazers) 🖥️  
+    SQL-powered operating system instrumentation, monitoring, and analytics framework for queryable security telemetry.
 
-* **[Hunters](https://hunters.security/)**
-  Cloud security operations platform focused on automated detection, investigation and response.
+11. **[Temporal](https://github.com/temporalio/temporal)** [<img src="https://img.shields.io/github/stars/temporalio/temporal?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/temporalio/temporal/stargazers) ⏳  
+    Durable execution platform enabling developer teams to build fault-tolerant, long-running incident response workflows without losing state.
 
-### Open-source emphasis
+12. **[SpiderFoot](https://github.com/smicallef/spiderfoot)** [<img src="https://img.shields.io/github/stars/smicallef/spiderfoot?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/smicallef/spiderfoot/stargazers) 🕷️  
+    Automated OSINT collection and recon platform useful for enriching domains, IP addresses, hashes, and organization targets.
 
-Unlike the commercial platforms above, open-source SOAR usually comes as a collection of interoperable projects:
+13. **[NATS](https://github.com/nats-io/nats-server)** [<img src="https://img.shields.io/github/stars/nats-io/nats-server?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/nats-io/nats-server/stargazers) 🚀  
+    High-performance cloud-native messaging system designed for microservice communication in security automation platforms.
 
-* **Shuffle** — orchestration and security workflow automation
-* **StackStorm** — event-driven automation and remediation
-* **TheHive** — incident-response case management
-* **Cortex** — observable analysis and active response
-* **DFIR-IRIS** — collaborative incident response
-* **MISP** — threat-intelligence management and sharing
-* **OpenCTI Community Edition** — cyber-threat intelligence knowledge platform
-* **Wazuh** — SIEM/XDR and security-event source
-* **IntelOwl** — automated OSINT/threat-intelligence enrichment
-* **SpiderFoot** — automated OSINT collection
-* **n8n** — general workflow automation building block
-* **Node-RED** — event-driven integration and automation
-* **StackStorm** — event-driven rule/workflow automation
-* **Apache Airflow** — scheduled workflow orchestration
-* **Argo Workflows** — Kubernetes-native workflow automation
-* **Temporal** — durable workflow execution
+14. **[Windmill](https://github.com/windmill-labs/windmill)** [<img src="https://img.shields.io/github/stars/windmill-labs/windmill?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/windmill-labs/windmill/stargazers) 💨  
+    Developer-focused open-source automation platform converting Python, TypeScript, Go, and Bash scripts into workflows and internal UIs.
 
-The distinction is important: **Shuffle and StackStorm are closer to the orchestration/automation core of a SOAR**, whereas projects such as TheHive, Cortex, MISP, OpenCTI and Wazuh provide specialized capabilities that can be orchestrated by the SOAR layer.
+15. **[Argo Workflows](https://github.com/argoproj/argo-workflows)** [<img src="https://img.shields.io/github/stars/argoproj/argo-workflows?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/argoproj/argo-workflows/stargazers) 🐙  
+    Container-native workflow engine for orchestrating parallel security jobs and Kubernetes automated response tasks.
 
-## Open-Source GitHub Projects
+16. **[Wazuh](https://github.com/wazuh/wazuh)** [<img src="https://img.shields.io/github/stars/wazuh/wazuh?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/wazuh/wazuh/stargazers) 🛡️  
+    Free and open-source SIEM / XDR platform providing endpoint protection, log analysis, vulnerability detection, and active response execution.
 
-* **[Shuffle](https://github.com/Shuffle/Shuffle)**
-  Open-source security automation platform with visual workflow creation, OpenAPI-based applications, security integrations, distributed workers and automation capabilities. Shuffle is one of the closest open-source projects to a traditional standalone SOAR platform. ([GitHub][2])
+17. **[OWASP ZAP](https://github.com/zaproxy/zaproxy)** [<img src="https://img.shields.io/github/stars/zaproxy/zaproxy?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/zaproxy/zaproxy/stargazers) ⚡  
+    World-class open-source web application security scanner for automated penetration testing and dynamic security validation.
 
-* **[StackStorm](https://github.com/StackStorm/st2)**
-  Event-driven automation platform for rules, workflows, automated remediation, incident response and integration with external systems. Licensed under Apache-2.0. ([GitHub][3])
+18. **[Salt Project](https://github.com/saltstack/salt)** [<img src="https://img.shields.io/github/stars/saltstack/salt?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/saltstack/salt/stargazers) 🧂  
+    Event-driven infrastructure automation and remote execution engine capable of instant host-level security remediation.
 
-* **[TheHive](https://github.com/StrangeBeeCorp/TheHive)**
-  Collaborative security incident-response and case-management platform designed for SOCs, CSIRTs and security teams.
+19. **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** [<img src="https://img.shields.io/github/stars/opensearch-project/OpenSearch?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/opensearch-project/OpenSearch/stargazers) 🔎  
+    Community-driven, open-source search and analytics suite used as the scalable log storage and security analytics backend.
 
-* **[Cortex](https://github.com/TheHive-Project/Cortex)**
-  Observable analysis and active-response engine capable of automatically analyzing IP addresses, domains, URLs, hashes, files and other observables through analyzers and a REST API. ([GitHub][4])
+20. **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** [<img src="https://img.shields.io/github/stars/redcanaryco/atomic-red-team?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/redcanaryco/atomic-red-team/stargazers) ⚛️  
+    Small, highly targeted security tests mapped to the MITRE ATT&CK framework to validate security detections and SOAR triggers.
 
-* **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)**
-  Collaborative incident-response platform for organizing investigations, cases, technical evidence and response activities. It provides an API and modular extensions for automated enrichment. ([GitHub][5])
+21. **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** [<img src="https://img.shields.io/github/stars/OpenCTI-Platform/opencti?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/OpenCTI-Platform/opencti/stargazers) 🧠  
+    Open Cyber Threat Intelligence platform using STIX2 standards and knowledge graphs to manage indicators, threat actors, and campaigns.
 
-* **[MISP](https://github.com/MISP/MISP)**
-  Open-source threat-intelligence sharing platform supporting indicators, events, correlations, automated feeds, APIs, RBAC, publishing/subscribing and integration with security workflows. MISP is licensed under AGPL-3.0. ([GitHub][6])
+22. **[Falco](https://github.com/falcosecurity/falco)** [<img src="https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/falcosecurity/falco/stargazers) 🦅  
+    Cloud-native runtime security threat detection engine for Linux, Kubernetes, and container environments.
 
-* **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)**
-  Open cyber-threat intelligence platform using structured knowledge, relationships, STIX and connectors to integrate intelligence with security operations. The Community Edition is Apache-2.0 licensed; Enterprise Edition uses a separate license. ([GitHub][7])
+23. **[Zeek](https://github.com/zeek/zeek)** [<img src="https://img.shields.io/github/stars/zeek/zeek?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/zeek/zeek/stargazers) 📡  
+    Powerful network security monitoring framework producing structured behavioral logs and event streams for automated triage.
 
-* **[Wazuh](https://github.com/wazuh/wazuh)**
-  Open-source security platform providing endpoint telemetry, threat detection, vulnerability information, file-integrity monitoring and security analytics that can trigger SOAR workflows.
+24. **[MITRE Caldera](https://github.com/mitre/caldera)** [<img src="https://img.shields.io/github/stars/mitre/caldera?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/mitre/caldera/stargazers) 🌋  
+    Automated adversary emulation system built on the MITRE ATT&CK framework to test response playbooks.
 
-* **[IntelOwl](https://github.com/intelowlproject/IntelOwl)**
-  Open-source threat-intelligence/OSINT automation platform for analyzing files, IPs, domains and other observables through multiple analyzers.
+25. **[Infection Monkey](https://github.com/guardicore/monkey)** [<img src="https://img.shields.io/github/stars/guardicore/monkey?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/guardicore/monkey/stargazers) 🐒  
+    Open-source breach and attack simulation (BAS) tool that assesses network resilience against automated lateral movement.
 
-* **[SpiderFoot](https://github.com/smicallef/spiderfoot)**
-  Automated OSINT platform useful for enriching domains, IP addresses, organizations and other indicators during security investigations.
+26. **[Suricata](https://github.com/OISF/suricata)** [<img src="https://img.shields.io/github/stars/OISF/suricata?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/OISF/suricata/stargazers) 🐯  
+    High-performance network IDS/IPS and threat detection engine generating JSON alert feeds for automation.
 
-* **[TheHive Project Cortex Analyzers](https://github.com/TheHive-Project/Cortex-Analyzers)**
-  Collection of analyzer integrations that can be invoked by Cortex/TheHive workflows to enrich security observables.
+27. **[StackStorm](https://github.com/StackStorm/st2)** [<img src="https://img.shields.io/github/stars/StackStorm/st2?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/StackStorm/st2/stargazers) ⚡  
+    Apache-2.0 licensed event-driven automation platform with rules, sensors, workflows, ChatOps, and 160+ integration packs.
 
-* **[MISP Modules](https://github.com/MISP/misp-modules)**
-  Extensible collection of modules for enriching and processing MISP events and indicators.
+28. **[MISP](https://github.com/MISP/MISP)** [<img src="https://img.shields.io/github/stars/MISP/MISP?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/MISP/MISP/stargazers) 🌐  
+    Open-source threat-intelligence sharing platform supporting IOC correlations, taxonomies, automated feeds, and ZMQ/Kafka pub-sub.
 
-* **[MISP Playbooks](https://github.com/MISP/misp-playbooks)**
-  Playbook collection for automating MISP-related security workflows. The repository is BSD-2-Clause licensed. ([GitHub][8])
+29. **[Rundeck](https://github.com/rundeck/rundeck)** [<img src="https://img.shields.io/github/stars/rundeck/rundeck?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/rundeck/rundeck/stargazers) 🏃  
+    Open-source operational runbook automation for self-service incident remediation, account disabling, and log collection.
 
-### Additional Strong Open-Source Options
+30. **[GRR Rapid Response](https://github.com/google/grr)** [<img src="https://img.shields.io/github/stars/google/grr?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/google/grr/stargazers) 🚨  
+    Incident-response framework focused on remote live forensics and memory investigation on enterprise endpoints.
 
-* **[Shuffle](https://github.com/Shuffle/Shuffle)** — dedicated open-source security automation/SOAR.
-* **[StackStorm](https://github.com/StackStorm/st2)** — event-driven orchestration and automated remediation.
-* **[TheHive](https://github.com/StrangeBeeCorp/TheHive)** — incident-response and case management.
-* **[Cortex](https://github.com/TheHive-Project/Cortex)** — automated observable analysis.
-* **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** — collaborative incident response.
-* **[MISP](https://github.com/MISP/MISP)** — threat-intelligence sharing and automation.
-* **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** — cyber-threat intelligence knowledge graph.
-* **[Wazuh](https://github.com/wazuh/wazuh)** — SIEM/XDR and endpoint telemetry.
-* **[IntelOwl](https://github.com/intelowlproject/IntelOwl)** — automated threat intelligence.
-* **[SpiderFoot](https://github.com/smicallef/spiderfoot)** — OSINT enrichment.
-* **[Cortex Analyzers](https://github.com/TheHive-Project/Cortex-Analyzers)** — automated IOC analysis.
-* **[MISP Modules](https://github.com/MISP/misp-modules)** — enrichment and transformation modules.
-* **[MISP Playbooks](https://github.com/MISP/misp-playbooks)** — reusable threat-intelligence automation.
-* **[Node-RED](https://github.com/node-red/node-red)** — event-driven workflow automation.
-* **[Apache Airflow](https://github.com/apache/airflow)** — scheduled workflow orchestration.
-* **[Argo Workflows](https://github.com/argoproj/argo-workflows)** — Kubernetes-native workflow engine.
-* **[Temporal](https://github.com/temporalio/temporal)** — durable distributed workflows.
-* **[Windmill](https://github.com/windmill-labs/windmill)** — developer-oriented workflow automation.
-* **[Kestra](https://github.com/kestra-io/kestra)** — event-driven workflow orchestration.
-* **[Rundeck](https://github.com/rundeck/rundeck)** — operational runbook automation.
-* **[Ansible](https://github.com/ansible/ansible)** — infrastructure and response automation.
-* **[Salt Project](https://github.com/saltstack/salt)** — event-driven configuration and remediation automation.
-* **[NATS](https://github.com/nats-io/nats-server)** — lightweight event/messaging infrastructure.
-* **[Apache Kafka](https://github.com/apache/kafka)** — event streaming for security automation.
-* **[OpenSearch](https://github.com/opensearch-project/OpenSearch)** — security analytics and searchable event data.
-* **[Wazuh](https://github.com/wazuh/wazuh)** — detection source and automated-response trigger.
-* **[Suricata](https://github.com/OISF/suricata)** — IDS/IPS events for automated response.
-* **[Zeek](https://github.com/zeek/zeek)** — network telemetry and behavioral detection.
-* **[Falco](https://github.com/falcosecurity/falco)** — runtime security events.
-* **[Cilium Tetragon](https://github.com/cilium/tetragon)** — eBPF-based security enforcement and observability.
+31. **[Cilium Tetragon](https://github.com/cilium/tetragon)** [<img src="https://img.shields.io/github/stars/cilium/tetragon?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/cilium/tetragon/stargazers) 🛡️  
+    eBPF-based real-time security observability and runtime enforcement engine for Linux kernel security events.
 
-## Open-Source SOAR Platforms
+32. **[IntelOwl](https://github.com/intelowlproject/IntelOwl)** [<img src="https://img.shields.io/github/stars/intelowlproject/IntelOwl?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/intelowlproject/IntelOwl/stargazers) 🦉  
+    Threat intelligence / OSINT automation platform to analyze files, IPs, domains, and IOC observables across 80+ analyzers.
 
-### Shuffle
+33. **[Velociraptor](https://github.com/Velocidex/velociraptor)** [<img src="https://img.shields.io/github/stars/Velocidex/velociraptor?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/Velocidex/velociraptor/stargazers) 🦖  
+    Advanced digital forensics and incident response (DFIR) endpoint monitoring, collection, and hunting platform.
 
+34. **[TheHive](https://github.com/TheHive-Project/TheHive)** [<img src="https://img.shields.io/github/stars/TheHive-Project/TheHive?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/TheHive-Project/TheHive/stargazers) 🐝  
+    Collaborative security incident response and case management platform designed for SOC analysts, CSIRTs, and incident managers.
+
+35. **[Shuffle](https://github.com/Shuffle/Shuffle)** [<img src="https://img.shields.io/github/stars/Shuffle/Shuffle?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/Shuffle/Shuffle/stargazers) 🔀  
+    Open-source dedicated security automation/SOAR platform featuring a visual workflow editor, OpenAPI app generator, and distributed workers.
+
+36. **[OpenBAS](https://github.com/OpenBAS-Platform/openbas)** [<img src="https://img.shields.io/github/stars/OpenBAS-Platform/openbas?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/OpenBAS-Platform/openbas/stargazers) 🎯  
+    Open Breach & Attack Simulation platform for planning and executing crisis exercises and automated security playbook validation.
+
+37. **[Cortex](https://github.com/TheHive-Project/Cortex)** [<img src="https://img.shields.io/github/stars/TheHive-Project/Cortex?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/TheHive-Project/Cortex/stargazers) 🔬  
+    Observable analysis and active-response engine providing automated VirusTotal, WHOIS, DNS, sandbox, and threat enrichment via REST API.
+
+38. **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** [<img src="https://img.shields.io/github/stars/dfir-iris/iris-web?style=social&color=white" alt="GitHub_Stars"/>](https://github.com/dfir-iris/iris-web/stargazers) 🌺  
+    Collaborative web-based incident-response platform for organizing investigations, technical evidence, IOC timelines, and automated enrichment.
+
+---
+
+## ⚡ Open-Source SOAR Platforms
+
+### 🔀 Shuffle
 **[Shuffle](https://github.com/Shuffle/Shuffle)** is the closest match to a conventional open-source SOAR platform.
-
-It provides:
-
-* Visual workflow editor
-* Security-oriented applications
-* OpenAPI integrations
-* Webhooks
-* Workflow execution
-* Sub-workflows
-* Distributed workers
-* Python applications
-* Security-tool integrations
-* MSSP-oriented organization support
-* On-premise deployment
-* Docker-based deployment
-* API-driven automation
-
-Shuffle's repository currently describes it as a general-purpose security automation platform and provides workflow, application and worker components. ([GitHub][2])
-
-### StackStorm
-
-**[StackStorm](https://github.com/StackStorm/st2)** is particularly strong when the priority is **event-driven automation and response** rather than a SOC case-management UI.
-
-It provides:
-
-* Rules engine
-* Event triggers
-* Workflows
-* Actions
-* Sensors
-* Integration packs
-* ChatOps
-* Automated remediation
-* Incident response
-* Python automation
-* REST APIs
-
-StackStorm is Apache-2.0 licensed. ([GitHub][3])
-
-## Open-Source Incident Response & Case Management
-
-### TheHive
-
-**[TheHive](https://github.com/StrangeBeeCorp/TheHive)** is designed around collaborative incident response.
-
-Typical capabilities include:
-
-* Cases
-* Alerts
-* Tasks
-* Observables
-* Investigations
-* Analyst collaboration
-* Case templates
-* API integration
-* Cortex integration
-* MISP integration
-
-It is particularly useful as the **human analyst/case-management layer** of an open-source SOAR architecture.
-
-### DFIR-IRIS
-
-**[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** is a collaborative incident-response platform with modular extensions and an API.
-
-It can be used for:
-
-* Incident tracking
-* Investigation management
-* Evidence organization
-* IOC enrichment
-* Analyst collaboration
-* Automated modules
-* Integration with MISP and other security tools
-
-DFIR-IRIS is LGPL-3 licensed. ([GitHub][5])
-
-## Open-Source Threat Intelligence & IOC Automation
-
-### MISP
-
-**[MISP](https://github.com/MISP/MISP)** is one of the most important open-source components for SOAR-based threat-intelligence automation.
-
-It provides:
-
-* IOC management
-* Threat-intelligence sharing
-* STIX support
-* Correlation
-* Taxonomies
-* Galaxies
-* Feeds
-* APIs
-* ZMQ/Kafka publishing
-* RBAC
-* Automated synchronization
-* Enrichment
-
-MISP explicitly supports automated publication/subscription and integration with other security tools, making it an excellent SOAR data source. ([GitHub][6])
-
-### OpenCTI
-
-**[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** provides a knowledge-oriented threat-intelligence platform.
-
-It is useful for:
-
-* Threat actors
-* Malware
-* Campaigns
-* Vulnerabilities
-* Indicators
-* Attack techniques
-* Relationships
-* STIX
-* Connectors
-* Automated intelligence enrichment
-
-The OpenCTI Community Edition is Apache-2.0 licensed, while its Enterprise Edition has a separate license. ([GitHub][7])
-
-### Cortex
-
-**[Cortex](https://github.com/TheHive-Project/Cortex)** is particularly useful as an **automated enrichment engine**.
-
-For example:
-
-```text
-Alert
-  ↓
-Extract IOC
-  ↓
-Cortex Analyzer
-  ↓
-VirusTotal / WHOIS / DNS / Sandbox / Reputation
-  ↓
-Enrichment
-  ↓
-SOAR Decision
-```
-
-Cortex supports bulk observable analysis and automation through its REST API. ([GitHub][4])
-
-## Open-Source Workflow & Automation Engines
-
-### Node-RED
-
-**[Node-RED](https://github.com/node-red/node-red)**
-
-Useful for:
-
-* Webhooks
-* API calls
-* Event processing
-* Security integrations
-* MQTT
-* REST
-* Data transformation
-* Notifications
-* Custom response workflows
-
-### Apache Airflow
-
-**[Apache Airflow](https://github.com/apache/airflow)**
-
-Useful when security workflows involve:
-
-* Scheduled enrichment
-* Threat-feed ingestion
-* Data processing
-* Batch workflows
-* Reporting
-* Periodic threat-hunting jobs
-
-### Argo Workflows
-
-**[Argo Workflows](https://github.com/argoproj/argo-workflows)**
-
-Kubernetes-native workflow engine suitable for cloud-native security automation.
-
-### Temporal
-
-**[Temporal](https://github.com/temporalio/temporal)**
-
-Durable workflow platform useful for long-running response processes where workflows must survive infrastructure failures and resume reliably.
-
-### Kestra
-
-**[Kestra](https://github.com/kestra-io/kestra)**
-
-Event-driven orchestration platform suitable for API integrations, scheduled security operations and data workflows.
-
-### Windmill
-
-**[Windmill](https://github.com/windmill-labs/windmill)**
-
-Developer-focused automation platform supporting scripts, workflows, APIs and scheduled jobs.
-
-### Rundeck
-
-**[Rundeck](https://github.com/rundeck/rundeck)**
-
-Useful for creating controlled operational runbooks such as:
-
-* Disable account
-* Isolate host
-* Restart service
-* Block IP
-* Collect logs
-* Run forensic commands
-* Execute remediation
-
-## Open-Source SIEM/XDR & Security Data Sources
-
-SOAR normally sits **above detection systems**, so the following projects are important sources of alerts and response triggers.
-
-### Wazuh
-
-**[Wazuh](https://github.com/wazuh/wazuh)**
-
-Useful for:
-
-* Endpoint alerts
-* File-integrity events
-* Vulnerability alerts
-* Malware detections
-* Authentication events
-* Security configuration events
-
-These events can trigger Shuffle, StackStorm or custom automation.
-
-### Suricata
-
-**[Suricata](https://github.com/OISF/suricata)**
-
-Useful for:
-
-* IDS alerts
-* IPS events
-* Network signatures
-* Malware traffic
-* Command-and-control detection
-
-### Zeek
-
-**[Zeek](https://github.com/zeek/zeek)**
-
-Provides network telemetry that can feed:
-
-* Threat detection
-* IOC correlation
-* Threat hunting
-* Automated investigation
-
-### Falco
-
-**[Falco](https://github.com/falcosecurity/falco)**
-
-Useful for runtime security events in:
-
-* Kubernetes
-* Containers
-* Linux systems
-* Cloud-native environments
-
-### Tetragon
-
-**[Tetragon](https://github.com/cilium/tetragon)**
-
-Provides eBPF-based security observability and enforcement that can generate automated response events.
-
-## Additional Strong Open-Source Options
-
-### Security Automation
-
-* **[Shuffle](https://github.com/Shuffle/Shuffle)**
-* **[StackStorm](https://github.com/StackStorm/st2)**
-* **[Node-RED](https://github.com/node-red/node-red)**
-* **[Apache Airflow](https://github.com/apache/airflow)**
-* **[Argo Workflows](https://github.com/argoproj/argo-workflows)**
-* **[Temporal](https://github.com/temporalio/temporal)**
-* **[Kestra](https://github.com/kestra-io/kestra)**
-* **[Windmill](https://github.com/windmill-labs/windmill)**
-* **[Rundeck](https://github.com/rundeck/rundeck)**
-* **[Ansible](https://github.com/ansible/ansible)**
-
-### Incident Response
-
-* **[TheHive](https://github.com/StrangeBeeCorp/TheHive)**
-* **[DFIR-IRIS](https://github.com/dfir-iris/iris-web)**
-* **[Cortex](https://github.com/TheHive-Project/Cortex)**
-* **[Velociraptor](https://github.com/Velocidex/velociraptor)**
-* **[GRR](https://github.com/google/grr)**
-* **[osquery](https://github.com/osquery/osquery)**
-
-### Threat Intelligence
-
-* **[MISP](https://github.com/MISP/MISP)**
-* **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)**
-* **[IntelOwl](https://github.com/intelowlproject/IntelOwl)**
-* **[SpiderFoot](https://github.com/smicallef/spiderfoot)**
-* **[Cortex Analyzers](https://github.com/TheHive-Project/Cortex-Analyzers)**
-* **[MISP Modules](https://github.com/MISP/misp-modules)**
-* **[MISP Playbooks](https://github.com/MISP/misp-playbooks)**
-
-### Detection & Telemetry
-
-* **[Wazuh](https://github.com/wazuh/wazuh)**
-* **[Suricata](https://github.com/OISF/suricata)**
-* **[Zeek](https://github.com/zeek/zeek)**
-* **[Falco](https://github.com/falcosecurity/falco)**
-* **[Tetragon](https://github.com/cilium/tetragon)**
-
-### Security Data & Analytics
-
-* **[OpenSearch](https://github.com/opensearch-project/OpenSearch)**
-* **[Grafana](https://github.com/grafana/grafana)**
-* **[Prometheus](https://github.com/prometheus/prometheus)**
-* **[Apache Kafka](https://github.com/apache/kafka)**
-* **[NATS](https://github.com/nats-io/nats-server)**
-* **[OpenTelemetry](https://github.com/open-telemetry/opentelemetry-collector)**
-* **[Vector](https://github.com/vectordotdev/vector)**
-* **[Fluent Bit](https://github.com/fluent/fluent-bit)**
-
-### Security Testing & Automated Response
-
-* **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** — ATT&CK-mapped adversary emulation tests.
-* **[MITRE Caldera](https://github.com/mitre/caldera)** — automated adversary emulation and security testing.
-* **[Infection Monkey](https://github.com/guardicore/monkey)** — breach-and-attack simulation.
-* **[OpenBAS](https://github.com/OpenBAS-Platform/openbas)** — breach and attack simulation platform.
-* **[Nuclei](https://github.com/projectdiscovery/nuclei)** — template-based vulnerability/security scanning.
-* **[OWASP ZAP](https://github.com/zaproxy/zaproxy)** — automated web security testing.
-
-## Commercial SOAR → Open-Source Equivalents
-
-| Commercial Platform       | Primary Focus                                 | Strong Open-Source Alternatives           |
-| ------------------------- | --------------------------------------------- | ----------------------------------------- |
-| **Cortex XSOAR**          | Enterprise SOAR + playbooks + case management | Shuffle + TheHive + Cortex + MISP         |
-| **Splunk SOAR**           | SIEM-integrated security automation           | Shuffle + StackStorm + Wazuh + OpenSearch |
-| **Microsoft Sentinel**    | SIEM + cloud SOAR                             | Wazuh + Shuffle + StackStorm + OpenSearch |
-| **Google SecOps**         | SIEM + threat intelligence + SOAR             | OpenCTI + Wazuh + Shuffle + Cortex        |
-| **Tines**                 | Low-code security automation                  | Shuffle + Node-RED + StackStorm           |
-| **Torq**                  | Security hyperautomation                      | Shuffle + StackStorm + Temporal           |
-| **Swimlane**              | Enterprise low-code SOAR                      | Shuffle + TheHive + StackStorm            |
-| **FortiSOAR**             | Security orchestration + incident response    | Shuffle + StackStorm + TheHive + Cortex   |
-| **IBM QRadar SOAR**       | Case management + response automation         | TheHive + Shuffle + Cortex + Wazuh        |
-| **D3 Security**           | Investigation + SOAR                          | Shuffle + TheHive + Cortex + MISP         |
-| **Rapid7 InsightConnect** | Low-code automation                           | StackStorm + Shuffle + Node-RED           |
-| **Sumo Logic Cloud SOAR** | Cloud SIEM/SOAR workflows                     | Shuffle + Wazuh + OpenSearch              |
-| **Cyware Orchestrate**    | Threat intelligence + security orchestration  | MISP + OpenCTI + Shuffle + Cortex         |
-| **Securonix**             | Security analytics + automation               | Wazuh + OpenSearch + Shuffle + MISP       |
-| **ArcSight SOAR**         | SIEM/SOAR integration                         | Wazuh + Shuffle + StackStorm              |
-| **NetWitness**            | Network detection + response                  | Zeek + Suricata + Wazuh + Shuffle         |
-
-> **Important:** These are **capability-oriented mappings**, not feature-for-feature replacements. Commercial SOAR platforms combine integrations, case management, playbook engines, support, threat intelligence, security analytics and enterprise governance in a single supported product. Open-source implementations normally require several projects to reproduce the same overall functionality.
-
-## Frameworks for Building Custom SOAR Systems
-
-A strong open-source SOAR architecture can be constructed from the following layers:
-
-| Layer                     | Open-Source Technologies              |
-| ------------------------- | ------------------------------------- |
-| SIEM/XDR                  | Wazuh · OpenSearch · Security Onion   |
-| Network Detection         | Suricata · Zeek                       |
-| Endpoint Telemetry        | Wazuh · osquery · Velociraptor        |
-| SOAR Core                 | Shuffle · StackStorm                  |
-| Case Management           | TheHive · DFIR-IRIS                   |
-| IOC Analysis              | Cortex · IntelOwl · SpiderFoot        |
-| Threat Intelligence       | MISP · OpenCTI                        |
-| Workflow Engine           | Temporal · Airflow · Argo · Kestra    |
-| Automation                | Ansible · Node-RED · Rundeck          |
-| Policy                    | Open Policy Agent                     |
-| Messaging                 | Kafka · NATS                          |
-| Data Pipeline             | Fluent Bit · Vector · OpenTelemetry   |
-| Search/Analytics          | OpenSearch                            |
-| Dashboards                | Grafana · OpenSearch Dashboards       |
-| Malware Analysis          | CAPE Sandbox · Cuckoo-derived tooling |
-| Vulnerability Scanning    | OpenVAS/Greenbone · Nuclei            |
-| Endpoint Response         | Velociraptor · osquery                |
-| Cloud/Kubernetes Response | Falco · Tetragon · Kubernetes APIs    |
-| Secrets                   | OpenBao · HashiCorp Vault             |
-| Notifications             | Matrix · Mattermost · Rocket.Chat     |
-
-## Reference Open-Source SOAR Architecture
+- Visual drag-and-drop workflow editor
+- OpenAPI-based application importer
+- Webhooks and event triggers
+- Sub-workflows and execution conditions
+- Distributed hybrid workers (on-premise + cloud)
+- MSSP multi-organization support
+
+### ⚡ StackStorm
+**[StackStorm](https://github.com/StackStorm/st2)** is particularly strong for **event-driven auto-remediation and SOC operations**.
+- Rules engine with flexible sensor triggers
+- Orquesta and ActionChain workflow engines
+- 160+ integration packs with 6,000+ pre-built actions
+- ChatOps (Slack, Microsoft Teams, Mattermost)
+- Apache-2.0 licensed
+
+---
+
+## 🚨 Open-Source Incident Response & Case Management
+
+### 🐝 TheHive
+**[TheHive](https://github.com/TheHive-Project/TheHive)** is designed around collaborative incident response.
+- Case tracking, alert triage, tasks, and observables
+- Analyst collaboration and case templates
+- Deep native integration with Cortex for automated analysis and MISP for threat intelligence sharing
+
+### 🌺 DFIR-IRIS
+**[DFIR-IRIS](https://github.com/dfir-iris/iris-web)** is a collaborative incident-response web application.
+- Investigation tracking, IOC asset organization, and evidence timelines
+- Modular Python extension architecture for automated enrichment
+- LGPL-3 licensed
+
+---
+
+## 🧠 Open-Source Threat Intelligence & IOC Automation
+
+### 🌐 MISP
+**[MISP](https://github.com/MISP/MISP)** is the leading open-source threat-intelligence sharing platform.
+- IOC management, STIX/TAXII standards, taxonomies, and galaxies
+- Automated pub/sub synchronization via ZeroMQ & Kafka
+- AGPL-3.0 licensed
+
+### 🧠 OpenCTI
+**[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** provides a knowledge-graph-oriented threat intelligence platform.
+- Mappings for threat actors, campaigns, vulnerabilities, indicators, and MITRE ATT&CK techniques
+- Connectors for automated enrichment and SIEM integration
+- Apache-2.0 Community Edition
+
+---
+
+## 🎯 Suggested Open-Source Architecture by Use Case
+
+| SOC Use Case | Recommended Open-Source Stack |
+| --- | --- |
+| **Complete Self-Hosted SOAR Stack** | Shuffle + TheHive + Cortex + MISP + Wazuh |
+| **Event-Driven Auto-Remediation** | StackStorm + Wazuh + OpenSearch + Ansible |
+| **Threat-Intelligence-Centric SOC** | OpenCTI + MISP + Shuffle + Cortex + IntelOwl |
+| **Collaborative DFIR & Forensics** | DFIR-IRIS + Cortex + Velociraptor + osquery |
+| **Cloud-Native & K8s Security** | Falco + Tetragon + Wazuh + Argo Workflows + Shuffle |
+| **Developer Security Automation** | n8n + Windmill + Kestra + Temporal + Kafka |
+
+---
+
+## 🔄 Commercial SOAR → Open-Source Equivalents
+
+| Commercial Platform | Primary Focus | Strong Open-Source Alternatives |
+| --- | --- | --- |
+| **Cortex XSOAR** | Enterprise SOAR + playbooks + case management | Shuffle + TheHive + Cortex + MISP |
+| **Splunk SOAR** | SIEM-integrated security automation | Shuffle + StackStorm + Wazuh + OpenSearch |
+| **Microsoft Sentinel** | Cloud SIEM + Logic Apps SOAR | Wazuh + Shuffle + StackStorm + OpenSearch |
+| **Google SecOps** | SIEM + threat intelligence + SOAR | OpenCTI + Wazuh + Shuffle + Cortex |
+| **Tines** | Low-code security automation | Shuffle + n8n + Node-RED + StackStorm |
+| **Torq** | Security hyperautomation | Shuffle + StackStorm + Temporal + Kestra |
+| **Swimlane** | Enterprise low-code SOAR | Shuffle + TheHive + StackStorm |
+| **FortiSOAR** | Security orchestration + incident response | Shuffle + StackStorm + TheHive + Cortex |
+| **IBM QRadar SOAR** | Case management + response automation | TheHive + Shuffle + Cortex + Wazuh |
+| **D3 Security** | Investigation + MITRE ATT&CK SOAR | Shuffle + TheHive + Cortex + MISP |
+| **Rapid7 InsightConnect** | Low-code workflow automation | StackStorm + Shuffle + Node-RED |
+| **Sumo Logic Cloud SOAR** | Cloud SIEM/SOAR workflows | Shuffle + Wazuh + OpenSearch |
+| **Cyware Orchestrate** | Threat intelligence + security orchestration | MISP + OpenCTI + Shuffle + Cortex |
+
+---
+
+## 🧱 Frameworks for Building Custom SOAR Systems
+
+| Layer | Open-Source Technologies |
+| --- | --- |
+| **SIEM / XDR** | Wazuh · OpenSearch · Security Onion |
+| **Network Detection** | Suricata · Zeek |
+| **Endpoint Telemetry** | Wazuh · osquery · Velociraptor |
+| **SOAR Core** | Shuffle · StackStorm |
+| **Case Management** | TheHive · DFIR-IRIS |
+| **IOC Analysis** | Cortex · IntelOwl · SpiderFoot |
+| **Threat Intelligence** | MISP · OpenCTI |
+| **Workflow Engine** | Temporal · Airflow · Argo · Kestra |
+| **Automation & Remediation** | Ansible · Node-RED · Rundeck |
+| **Messaging Pipeline** | Kafka · NATS |
+| **Dashboards & BI** | Grafana · OpenSearch Dashboards |
+
+---
+
+## 📐 Reference Open-Source SOAR Architecture
 
 ```mermaid
 flowchart TB
-    A[Security Events] --> B[Detection Layer]
+    A[🚨 Security Events & Alerts] --> B[📡 Detection Layer]
 
-    B --> B1[Wazuh]
-    B --> B2[Suricata]
-    B --> B3[Zeek]
-    B --> B4[Endpoint / Cloud Alerts]
+    B --> B1[Wazuh SIEM/XDR]
+    B --> B2[Suricata IDS]
+    B --> B3[Zeek Telemetry]
+    B --> B4[Cloud / Endpoint Alerts]
 
-    B1 --> C[SOAR Orchestrator]
+    B1 --> C[⚡ SOAR Orchestrator]
     B2 --> C
     B3 --> C
     B4 --> C
 
-    C --> C1[Shuffle]
-    C --> C2[StackStorm]
+    C --> C1[Shuffle SOAR]
+    C --> C2[StackStorm Auto-Remediation]
 
-    C --> D[Case Management]
-
+    C --> D[🚨 Case Management]
     D --> D1[TheHive]
     D --> D2[DFIR-IRIS]
 
-    C --> E[Threat Intelligence]
-
+    C --> E[🧠 Threat Intelligence]
     E --> E1[MISP]
     E --> E2[OpenCTI]
-    E --> E3[Cortex]
-    E --> E4[IntelOwl]
+    E --> E3[Cortex Analyzers]
+    E --> E4[IntelOwl OSINT]
 
-    E --> F[Enrichment]
+    E --> F[🔍 Risk Scoring & Decision Engine]
 
-    F --> G[Decision / Policy Engine]
+    F --> G[🎯 Automated Response Actions]
+    G --> G1[Firewall IP Block]
+    G --> G2[EDR Endpoint Isolation]
+    G --> G3[Identity Account Lockout]
+    G --> G4[Email Quarantine]
 
-    G --> H[Automated Response]
-
-    H --> H1[Firewall]
-    H --> H2[EDR / Endpoint]
-    H --> H3[Identity]
-    H --> H4[Email]
-    H --> H5[Cloud]
-    H --> H6[Network]
-
-    H --> I[Verification]
-
-    I --> J[Case Update]
-    I --> K[Notification]
-    I --> L[Audit / SIEM]
+    G --> H[✅ Verification & Incident Closure]
 ```
 
-## Typical SOAR Workflow
+---
+
+## ⚙️ Typical SOAR Workflow
 
 ```mermaid
 flowchart LR
     A[Alert] --> B[Normalize]
     B --> C[Extract IOCs]
-    C --> D[Enrich]
+    C --> D[Enrich Context]
     D --> E[Risk Score]
     E --> F{Decision}
 
-    F -->|Benign| G[Close / Document]
+    F -->|Benign| G[Close Alert]
     F -->|Suspicious| H[Create Case]
     F -->|Malicious| I[Automated Response]
 
-    I --> J[Block IOC]
+    I --> J[Block IP]
     I --> K[Isolate Host]
-    I --> L[Disable Account]
-    I --> M[Quarantine Email]
+    I --> L[Disable User]
+    I --> M[Quarantine Mail]
 
     J --> N[Verify]
     K --> N
@@ -645,283 +365,57 @@ flowchart LR
     O --> P[Notify Analyst]
 ```
 
-## Recommended Open-Source SOAR Stack
+---
 
-For organizations wanting to build a serious self-hosted SOAR environment, a particularly strong architecture is:
+## 🤖 AI-Assisted Open-Source SOAR
 
-### Detection
-
-**Wazuh + Suricata + Zeek**
-
-### SOAR
-
-**Shuffle + StackStorm**
-
-### Case Management
-
-**TheHive + DFIR-IRIS**
-
-### Threat Intelligence
-
-**MISP + OpenCTI**
-
-### IOC Enrichment
-
-**Cortex + IntelOwl + SpiderFoot**
-
-### Endpoint Investigation
-
-**Velociraptor + osquery**
-
-### Automation
-
-**Ansible + Node-RED**
-
-### Workflow Reliability
-
-**Temporal**
-
-### Security Data
-
-**OpenSearch + Kafka**
-
-### Observability
-
-**Prometheus + Grafana + OpenTelemetry**
-
-This produces a modular architecture covering:
-
-* Alert ingestion
-* Alert normalization
-* IOC extraction
-* Threat-intelligence enrichment
-* Automated investigation
-* Risk scoring
-* Case creation
-* Analyst approval
-* Automated containment
-* Endpoint response
-* Firewall response
-* Account disabling
-* Email remediation
-* Threat-intelligence feedback
-* Audit logging
-* Metrics and reporting
-
-## Example Automated Incident
+Modern Security Operations Centers integrate local and cloud LLMs for automated alert summarization, IOC triage, and incident remediation guidance.
 
 ```text
-Wazuh detects suspicious PowerShell activity
-        ↓
-Shuffle receives alert
-        ↓
-Extract IP / Domain / Hash
-        ↓
-Cortex performs IOC enrichment
-        ↓
-MISP checks known threat intelligence
-        ↓
-OpenCTI checks related threat actor/campaign
-        ↓
-Risk score calculated
-        ↓
-TheHive creates incident
-        ↓
-Analyst approval required
-        ↓
-Ansible isolates endpoint
-        ↓
-Firewall blocks malicious IP
-        ↓
-Identity platform disables compromised account
-        ↓
-MISP event updated
-        ↓
-TheHive case updated
-        ↓
-SOC notification sent
+Security Alert Ingestion
+         ↓
+Shuffle SOAR Workflow
+         ↓
+Cortex / MISP IOC Enrichment
+         ↓
+Local LLM Contextual Analysis (Ollama / vLLM)
+         ↓
+Automated Triage & Risk Summary
+         ↓
+Analyst Approval Gate
+         ↓
+Ansible / StackStorm Automated Playbook Execution
 ```
-
-## SOAR Capability Matrix
-
-| Capability                    | Commercial SOAR | Strong Open-Source Options            |
-| ----------------------------- | --------------: | ------------------------------------- |
-| Playbook Automation           |               ✓ | Shuffle · StackStorm                  |
-| Visual Workflow Builder       |               ✓ | Shuffle · Node-RED                    |
-| Event-Driven Automation       |               ✓ | StackStorm · Shuffle                  |
-| Incident Management           |               ✓ | TheHive · DFIR-IRIS                   |
-| IOC Enrichment                |               ✓ | Cortex · IntelOwl · SpiderFoot        |
-| Threat Intelligence           |               ✓ | MISP · OpenCTI                        |
-| SIEM Integration              |               ✓ | Wazuh · OpenSearch                    |
-| Network Detection             |               ✓ | Suricata · Zeek                       |
-| Endpoint Response             |               ✓ | Wazuh · Velociraptor                  |
-| Case Management               |               ✓ | TheHive · DFIR-IRIS                   |
-| Automated Containment         |               ✓ | Ansible · StackStorm · Shuffle        |
-| Firewall Automation           |               ✓ | Ansible · APIs · StackStorm           |
-| Identity Response             |               ✓ | Keycloak · APIs · Ansible             |
-| Email Response                |               ✓ | APIs · Ansible · Shuffle              |
-| Malware Analysis              |               ✓ | CAPE/Cuckoo ecosystem                 |
-| Vulnerability Enrichment      |               ✓ | Greenbone · Nuclei                    |
-| Threat-Intel Sharing          |               ✓ | MISP                                  |
-| Threat Knowledge Graph        |               ✓ | OpenCTI                               |
-| Security Analytics            |               ✓ | OpenSearch                            |
-| Long-Running Workflows        |               ✓ | Temporal                              |
-| Kubernetes Automation         |               ✓ | Argo · Falco · Tetragon               |
-| Audit Trail                   |               ✓ | TheHive · OpenSearch · Wazuh          |
-| AI-Assisted Response          |               ✓ | LLM + local models + workflow engines |
-| Global Managed Infrastructure |               ✓ | Requires self-managed infrastructure  |
-| Vendor Threat Intelligence    |               ✓ | Must be assembled independently       |
-| Commercial Support/SLA        |               ✓ | Community/commercial support varies   |
-
-## Open-Source SOAR vs Commercial SOAR
-
-The main advantage of commercial SOAR platforms is **integration and operational consolidation**.
-
-A mature commercial platform can provide:
-
-* Hundreds of security integrations
-* Pre-built playbooks
-* Vendor-maintained connectors
-* Case management
-* Threat intelligence
-* RBAC
-* Audit trails
-* Enterprise support
-* High availability
-* Upgrade support
-* Security governance
-* Commercial threat intelligence
-* AI-assisted investigation
-
-Open-source SOAR offers different advantages:
-
-* No proprietary lock-in
-* Full control over data
-* Self-hosting
-* Custom integrations
-* Custom playbooks
-* API-level control
-* Transparent source code
-* Community-developed integrations
-* On-premise deployment
-* Cloud-independent architecture
-* Ability to combine best-of-breed security tools
-
-The trade-off is that **the organization becomes responsible for integration, maintenance, security hardening, upgrades and reliability**.
-
-## Strongest Open-Source Combinations
-
-### Closest to a Traditional SOAR
-
-**Shuffle + TheHive + Cortex + MISP**
-
-### SOC-Centric SOAR
-
-**Shuffle + Wazuh + TheHive + Cortex + MISP**
-
-### Enterprise Automation
-
-**StackStorm + Wazuh + OpenSearch + Ansible**
-
-### Threat-Intelligence-Centric Automation
-
-**Shuffle + MISP + OpenCTI + Cortex**
-
-### DFIR-Centric Automation
-
-**Shuffle + DFIR-IRIS + Cortex + Velociraptor**
-
-### Network-Security Automation
-
-**Shuffle + Suricata + Zeek + MISP + Cortex**
-
-### Cloud-Native SOAR
-
-**Shuffle + Wazuh + Falco + Tetragon + Kubernetes + Argo**
-
-### Developer/Engineering-Oriented Security Automation
-
-**StackStorm + Temporal + Ansible + Kafka + OpenSearch**
-
-## AI-Assisted Open-Source SOAR
-
-Modern SOAR platforms are increasingly incorporating AI-assisted investigation and automation.
-
-An open-source architecture can incorporate:
-
-* Local LLMs
-* Retrieval-augmented generation
-* Threat-intelligence retrieval
-* Alert summarization
-* IOC extraction
-* Incident classification
-* Playbook recommendation
-* Natural-language investigation
-* Automated report generation
-* Analyst copilots
-
-A possible architecture is:
-
-```text
-Security Alert
-     ↓
-SOAR
-     ↓
-IOC Extraction
-     ↓
-MISP / OpenCTI / Cortex
-     ↓
-Security Context
-     ↓
-Local LLM
-     ↓
-Investigation Summary
-     ↓
-Risk / Confidence
-     ↓
-Human Approval
-     ↓
-Automated Playbook
-```
-
-For security-sensitive deployments, AI-generated actions should normally be subject to **explicit policy controls, confidence thresholds and human approval**, especially for destructive actions such as account deletion, host isolation or firewall-wide blocking.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` following the existing format.
-3. Include: project name, official/GitHub link, 1–2 sentence description, and whether it is SaaS or open-source.
-4. Prefer actively maintained projects.
-5. Clearly distinguish **SOAR platforms** from **supporting security components**.
-6. Include license information when known.
-7. Avoid listing abandoned projects as current alternatives without clearly marking them.
-8. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-* This is a **community-curated** list — not exhaustive and not an endorsement.
-* Commercial products and trademarks belong to their respective owners.
-* Open-source projects listed here are not necessarily complete replacements for commercial SOAR platforms.
-* Some projects provide only one component of a complete SOAR architecture.
-* Licensing can change; always verify the current license before deployment or redistribution.
-* Self-hosted security automation requires appropriate security engineering, access controls, secrets management, monitoring, backups and disaster recovery.
-* Automated response can have significant operational consequences. Destructive actions should be tested and governed carefully.
-* Production SOAR deployments should use least privilege, approval gates, audit logging and strong credential isolation.
-* Security automation must comply with applicable privacy, cybersecurity, employment and data-protection regulations.
 
 ---
 
-**Made for SOC analysts, incident responders, threat hunters, security engineers, CISOs, MSSPs, DFIR teams, DevSecOps engineers, and organizations building open and self-hosted Security Orchestration, Automation & Response infrastructure.**
-Let's make SOAR more open, interoperable, transparent, automated, and accessible.
+## 📈 Star History
 
-[1]: https://guptadeepak.com/tools/top-5-soar-platforms-2026/?utm_source=chatgpt.com "Top 5 SOAR Platforms for 2026: Cortex XSOAR vs Splunk SOAR vs Tines vs Torq vs Swimlane | Deepak Gupta"
-[2]: https://github.com/shuffle/shuffle?utm_source=chatgpt.com "GitHub - Shuffle/Shuffle: Shuffle: A general purpose security automation platform. Our focus is on collaboration and resource sharing. · GitHub"
-[3]: https://github.com/stackstorm/st2?utm_source=chatgpt.com "GitHub - StackStorm/st2: StackStorm (aka \"IFTTT for Ops\") is event-driven automation for auto-remediation, incident responses, troubleshooting, deployments, and more for DevOps and SREs. Includes rules engine, workflow, 160 integration packs with 6000+ actions (see https://exchange.stackstorm.org) and ChatOps. Installer at https://docs.stackstorm.com/install/index.html · GitHub"
-[4]: https://github.com/TheHive-Project/Cortex?utm_source=chatgpt.com "GitHub - TheHive-Project/Cortex: Cortex: a Powerful Observable Analysis and Active Response Engine · GitHub"
-[5]: https://github.com/dfir-iris/iris-web?utm_source=chatgpt.com "GitHub - dfir-iris/iris-web: Collaborative Incident Response platform · GitHub"
-[6]: https://github.com/misp/misp?utm_source=chatgpt.com "GitHub - MISP/MISP: MISP (core software) - Open Source Threat Intelligence and Sharing Platform · GitHub"
-[7]: https://github.com/OpenCTI-Platform/opencti/blob/master/LICENSE?utm_source=chatgpt.com "opencti/LICENSE at master · OpenCTI-Platform/opencti · GitHub"
-[8]: https://github.com/MISP/misp-playbooks/blob/main/LICENSE?utm_source=chatgpt.com "misp-playbooks/LICENSE at main · MISP/misp-playbooks · GitHub"
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Security-Orchestration&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Security-Orchestration&type=date&legend=top-left)
 
+---
+
+## 🤝 How to Contribute
+
+Contributions from the global cybersecurity community are warmly welcomed! Please follow these steps:
+
+1. 🍴 Fork the repository.
+2. 📝 Add or update entries in `README.md` following the existing markdown table or badged list format.
+3. 🔗 Ensure all links lead to official project sites or valid GitHub stargazers pages.
+4. 🚀 Submit a Pull Request (PR) with a brief description of your additions.
+
+Check out [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) curated index for more awesome lists! ⭐
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is intended strictly as a **technology discovery and architectural reference guide**. All product names, logos, and trademarks belong to their respective owners.
+- Commercial platform pricing and valuation figures are based on public financial reports, marketplace listings, and industry data, and are subject to change.
+- Automated security playbooks can execute destructive actions (such as host isolation or account disablement). Production SOAR implementations should always incorporate human approval gates, role-based access control (RBAC), audit logging, and credential isolation.
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for SOC Analysts, Incident Responders, Threat Hunters, Security Engineers, CISOs & DevSecOps Teams.</b>
+</p>
